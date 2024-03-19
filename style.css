@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+    color:white;
+}
+html,body{
+height: 100%;
+width: 100%;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(14, 13, 13);
+}
+#nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 30px;
+    height: 50px;
+}
+#nav-2{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    
+
+}
+#main h3{
+    color : beige;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+
+
+
+
+
+/* #box1{
+    background-color: crimson;
+    height: 300px;
+    width: 300px;
+}
+#box2{
+    background-color: beige;
+    height: 300px;
+    width: 300px;
+}
+#box3{
+    background-color: royalblue;
+    height: 300px;
+    width: 300px;
+} */
