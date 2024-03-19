@@ -63,7 +63,7 @@ tl.from("#main h1",{
     opacity:0,
 })
 
-tl.from("img",{
+tl.from("#main img",{
     x:100,
     rotate:45,
     opacity:0,
@@ -84,7 +84,43 @@ tl.to("#page2 h2",{
 })
 
 
+var h1 = document.querySelectorAll("#page3 h2")
+
+h1.forEach((h)=>{
+    var clutter = ''
+    var text = h.textContent
+    var textSplit = text.split("")
+    
+    textSplit.forEach((letter)=>{
+        clutter+=  `<span>${letter}</span>`
+    })
+    h.innerHTML = clutter
+  
+})  
+
+tl.to("#page3 h2 span",{
+
+    color:'#bf6519',
+    stagger:0.2,
+    scrollTrigger:{
+        trigger:"#page3 h2",
+        scroller:"#scroll",
+        start:"top 75%",
+        end:"top 20%",
+        markers:true,
+        scrub:1,
+        
+    }
+
+})
+
+
+
+
+
 }
+
+
 
 sap_trigger()
 
