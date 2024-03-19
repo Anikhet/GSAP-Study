@@ -1,3 +1,51 @@
+gsap.registerPlugin(ScrollTrigger);
+
+const locoScroll = new LocomotiveScroll({
+  el: document.querySelector("#scroll"),
+  smooth: true,
+
+  // for tablet smooth
+  tablet: { smooth: true },
+
+  // for mobile
+  smartphone: { smooth: true }
+});
+locoScroll.on("scroll", ScrollTrigger.update);
+
+ScrollTrigger.scrollerProxy("#scroll", {
+  scrollTop(value) {
+    return arguments.length
+      ? locoScroll.scrollTo(value, 0, 0)
+      : locoScroll.scroll.instance.scroll.y;
+  },
+  getBoundingClientRect() {
+    return {
+      top: 0,
+      left: 0,
+      width: window.innerWidth,
+      height: window.innerHeight
+    };
+  }
+
+  // follwoing line is not required to work pinning on touch screen
+
+  /* pinType: document.querySelector(".smooth-scroll").style.transform
+    ? "transform"
+    : "fixed"*/
+});
+
+
+
+
+ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+ScrollTrigger.refresh();
+
+
+
+
+function sap_trigger(){
+
 var tl = gsap.timeline()
 
 tl.from("#nav h3",{
@@ -22,8 +70,28 @@ tl.from("img",{
     duration:0.5
 })
 
+tl.to("#page2 h2",{
+    transform:"translateX(-70%)",
+    scrollTrigger:{
+        trigger:"#page2",
+        scroller:"#scroll",
+        // markers:true,
+        start:"top 0",
+        end:"top -100%",
+        scrub:2,
+        pin:true
+    }
+})
 
 
+}
+
+sap_trigger()
+
+// const scroll = new LocomotiveScroll({
+//     el: document.querySelector('#scroll'),
+//     smooth: true
+// });
 
 
 

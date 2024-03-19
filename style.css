@@ -16,7 +16,7 @@ height: 100%;
 width: 100%;
 }
 #main{
-    height: 100%;
+    min-height: 100vh;
     width: 100%;
     background-color: rgb(14, 13, 13);
 }
@@ -71,7 +71,7 @@ width: 100%;
 
 img{
     position: absolute;
-    top: 10%;
+    top: 3%;
     left: 40%;
     height: 400px;
     object-fit: cover;
@@ -91,17 +91,22 @@ img{
 }
 
 #page2{
-    height: 100%;
+    min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgb(14, 13, 13),beige);
+    background-color:ffffff ;
 }
-
+#page2 h2{
+    font-size: 40vw;
+    color: black;
+}
 
 #page3{
-    height: 100%;
+    min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(beige,salmon);
+    background-color:rgb(14, 13, 13) ;
 }
+
+
 
 
 /* #box1{
