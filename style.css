@@ -18,7 +18,8 @@ width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:0 30px;
+    padding:0 50px;
+    padding-top: 20px;
     height: 50px;
 }
 #nav-2{
@@ -29,14 +30,46 @@ width: 100%;
 
 }
 #main h3{
-    color : beige;
-    font-size: 20px;
+
+    font-size: 23px;
     text-transform: uppercase;
+    font-weight: 400;
+    font-family:'Courier New', Courier, monospace
+}
+#main h1{
+    font-size: 150px;
+    font-family:'Courier New', Courier, monospace;
     font-weight: 500;
+    text-transform: uppercase;
+    line-height: 120px;
+    /* background-color: red; */
+    width: 80%;
+    position: relative;
+    z-index: 9;
+    margin-left: 10%;
+}
+#main h1:nth-child(2){
+    margin-top: 180px;
+}
+#main h1:nth-child(3){
+  
+    text-align: center;
+
 }
 
+#main h1:nth-child(4){
+    margin-left: 800px;
+    
+}
 
-
+img{
+    position: absolute;
+    top: 5%;
+    left: 40%;
+    height: 400px;
+    object-fit: cover;
+    width: 300px;
+}
 
 
 
