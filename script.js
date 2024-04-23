@@ -33,14 +33,8 @@ ScrollTrigger.scrollerProxy("#scroll", {
     ? "transform"
     : "fixed"*/
 });
-
-
-
-
 ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-
 ScrollTrigger.refresh();
-
 
 
 
@@ -98,6 +92,7 @@ h1.forEach((h)=>{
   
 })  
 
+
 tl.to("#page3 h2 span",{
 
     color:'#bf6519',
@@ -107,7 +102,7 @@ tl.to("#page3 h2 span",{
         scroller:"#scroll",
         start:"top 75%",
         end:"top 20%",
-        markers:true,
+        // markers:true,
         scrub:1,
         
     }
